@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
-        <entry key="app/src/main/res/layout/toolbar.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12658227848101267" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/opciones.xml" value="0.18" />
       </map>
     </option>
   </component>

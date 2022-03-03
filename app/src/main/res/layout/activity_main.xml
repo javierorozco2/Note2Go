@@ -6,35 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include layout="@layout/toolbar"></include>
+
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#000000"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="Mis Notas"
-                android:textColor="#FFFFFF"
-                android:textSize="40dp"></TextView>
-
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="300dp"
-                android:layout_marginTop="38dp"
-                android:src="@drawable/edit"></ImageView>
-
-        </RelativeLayout>
 
     </LinearLayout>
 
