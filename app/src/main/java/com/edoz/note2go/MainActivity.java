@@ -1,8 +1,11 @@
 package com.edoz.note2go;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,26 +13,31 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
+    TextView registro, login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar); //Colocar el toolbar
-        getSupportActionBar().setTitle("Mis notas"); //Titulo del toolbar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        registro = findViewById(R.id.gtRegister);
+        login = findViewById(R.id.gtLogin);
 
-    };
+        registro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, register.class);
+                startActivity(i);
+            }
+        });
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.opciones, menu);
-        return super.onCreateOptionsMenu(menu);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(MainActivity.this, ubicaciones.class);
+                startActivity(i2);
+            }
+        });
     }
 
 };

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,15 +40,25 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     public void setItems(List<ListElement> items){ mData = items; }
 
-    public class ViewHolder extends  RecyclerView.ViewHolder{
+
+    //Aqui van los datos
+    public class ViewHolder extends RecyclerView.ViewHolder{
+
+        TextView nombre, cantidad, notas;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            nombre = itemView.findViewById(R.id.ubicaciontitulo);
+            cantidad = itemView.findViewById(R.id.notasnumero);
+            notas = itemView.findViewById(R.id.notastitulos);
         }
 
-        void bindData(final ListElement item){
-
+        void binData(final ListElement item){
+            nombre.setText(item.getNombre());
+            cantidad.setText(item.getCantidad());
+            notas.setText(item.getListas());
         }
+
     }
 
 

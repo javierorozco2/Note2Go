@@ -18,30 +18,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mis notas"
+            android:text="Mis ubicaciones"
             android:textColor="@color/white"
             android:textSize="36dp"
             android:fontFamily="@font/product_sans_bold"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="30dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="right">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity = "bottom"
                 android:src="@drawable/edit"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity = "bottom"
                 android:src="@drawable/sign_out_alt"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="10dp"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -50,9 +50,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
         android:layout_below="@id/misnotasly"
-        android:id="@+id/list_element">
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rv">
 
     </androidx.recyclerview.widget.RecyclerView>
 
