@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gris">#BFBFBF</color>
     <color name="azultxt">#0070C0</color>
+    <color name="azultitle">#00B0F0</color>
 
 </resources>

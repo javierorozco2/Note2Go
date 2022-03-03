@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Note2Go">
         <activity
+            android:name=".ubicaciones"
+            android:exported="false" />
+        <activity
             android:name=".register"
             android:exported="false" />
         <activity

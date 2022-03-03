@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/drawable/blanco.xml" value="0.1515" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_register.xml" value="0.265625" />
+        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_ubicaciones.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/toolbar.xml" value="0.25052083333333336" />
       </map>
     </option>
   </component>

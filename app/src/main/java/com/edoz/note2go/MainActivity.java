@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView registro;
+    TextView registro, login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         registro = findViewById(R.id.gtRegister);
+        login = findViewById(R.id.gtLogin);
 
         registro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MainActivity.this, register.class);
                 startActivity(i);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(MainActivity.this, ubicaciones.class);
+                startActivity(i2);
             }
         });
     }
