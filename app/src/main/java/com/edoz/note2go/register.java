@@ -2,28 +2,26 @@ package com.edoz.note2go;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class register extends AppCompatActivity {
 
-    TextView registro;
-
+    TextView registrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
-        registro = findViewById(R.id.gtRegister);
+        registrar = findViewById(R.id.registrar);
 
-        registro.setOnClickListener(new View.OnClickListener() {
+        registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(MainActivity.this, register.class);
-                startActivity(i);
+                //Registrar usuario antes de terminar activity
+                finish();
             }
         });
     }
