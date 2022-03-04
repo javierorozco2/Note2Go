@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardNotas"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="20dp"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/colorNota"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_marcador"></ImageView>
+
+
+            <TextView
+                android:id="@+id/tituloNotaCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="Nota 1"
+                android:textColor="#DF0505"
+                android:textSize="30dp"></TextView>
+
+            <TextView
+                android:id="@+id/contenidoNotaCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet consecdsd​"
+                android:textSize="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="35dp"
+                android:textColor="#C81F1F"></TextView>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

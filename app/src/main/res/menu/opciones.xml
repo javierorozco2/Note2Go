@@ -6,7 +6,7 @@
         android:id="@+id/editar"
         android:icon="@drawable/edit"
         android:orderInCategory="11"
-        android:title="nnot"
+        android:title="Crea una nota"
         app:showAsAction="ifRoom" />
 
 </menu>
