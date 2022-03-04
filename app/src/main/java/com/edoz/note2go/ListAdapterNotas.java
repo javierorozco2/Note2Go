@@ -18,9 +18,9 @@ public class ListAdapterNotas extends RecyclerView.Adapter<ListAdapterNotas.View
     private LayoutInflater mInflater;
     private Context context;
 
-    public ListAdapterNotas(List<ListElementNotas> itemList,Context contex){
+    public ListAdapterNotas(List<ListElementNotas> itemList,Context context){
         this.mInflater = LayoutInflater.from(context);
-        this.context = contex;
+        this.context = context;
         this.mData = itemList;
     }
 
