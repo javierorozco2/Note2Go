@@ -10,8 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Note2Go">
         <activity
-            android:name=".ListaNotas"
+            android:name=".nuevaubicacion"
+            android:exported="false"
+            android:parentActivityName=".editnota"/>
+        <activity
+            android:name=".editnota"
             android:exported="false" />
+        <activity
+            android:name=".ListaNotas"
+            android:exported="false"
+            android:parentActivityName=".ubicaciones"/>
         <activity
             android:name=".ubicaciones"
             android:exported="false" />

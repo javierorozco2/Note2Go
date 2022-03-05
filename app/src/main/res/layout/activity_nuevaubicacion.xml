@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nuevaubicacion"
+    android:background="@color/black">
+
+
+    <include layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+
+        <!--Aqui va el mapa-->
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:id="@+id/mapa"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:src="@drawable/rectangle"/>
+        <!-- ||||||||||||| -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar ubicación"
+                android:textColor="@color/azultxt"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="@font/product_sans_regular"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:text="Ubicaciones guardadas"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ubicGuardadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</RelativeLayout>

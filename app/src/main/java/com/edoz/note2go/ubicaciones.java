@@ -5,7 +5,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +16,31 @@ import java.util.List;
 public class ubicaciones extends AppCompatActivity {
 
     List<ListElement> elements;
+    ImageView salir, nueva;
+
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubicaciones);
 
+        salir = findViewById(R.id.salirimg);
+        nueva = findViewById(R.id.nuevaimg);
+
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        nueva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ubicaciones.this, editnota.class);
+                startActivity(i);
+            }
+        });
 
         crearCardUbicaciones();
     }

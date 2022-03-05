@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editnota"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/misnotasly"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="300dp"
+            android:background="@null"
+            android:layout_height="wrap_content"
+            android:hint="Titulo"
+            android:textColorHint="@color/gris"
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            android:padding="0dp"
+            android:fontFamily="@font/product_sans_bold"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right">
+            <ImageButton
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/guardarbtn"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity = "bottom"
+                android:src="@drawable/check"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"/>
+
+            <ImageButton
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/ubicacionbtn"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity = "bottom"
+                android:src="@drawable/marker"
+                android:layout_marginBottom="10dp"
+                android:background="@null"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/misnotasly"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/misnotasly2"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación: Casa"
+            android:textColor="@color/azultxt"
+            android:textSize="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:gravity="left"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="02/03/2002"
+            android:textColor="@color/azultxt"
+            android:textSize="16dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:gravity="right"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/misnotasly2"
+        android:layout_marginHorizontal="20dp"
+        android:text="Hola"
+        android:textColor="@color/white"
+        android:fontFamily="@font/product_sans_regular"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/texto"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/add" />
+    </LinearLayout>
+
+</RelativeLayout>
