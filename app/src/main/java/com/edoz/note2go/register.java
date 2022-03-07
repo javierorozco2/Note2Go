@@ -51,13 +51,11 @@ public class register extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(register.this);
         progressDialog.setMessage("Registrando ... ");
 
-        if (correo.getText().toString().equals("")){
+        if (correo.getText().toString().equals("") || pass.getText().toString().equals("") || reppass.getText().toString().equals("")){
             Toast.makeText(register.this, "Llene los campos", Toast.LENGTH_SHORT).show();
-        }else if (pass.getText().toString().equals("")){
-            Toast.makeText(register.this, "Llene los campos", Toast.LENGTH_SHORT).show();
-        }else if(pass.getText().toString().equals("")){
-            Toast.makeText(register.this, "Llene los campos", Toast.LENGTH_SHORT).show();
-        }else {
+        }else if(!pass.getText().toString().equals(reppass.getText().toString())){
+            Toast.makeText(register.this, "Las contrasenas no coinciden", Toast.LENGTH_SHORT).show();
+        } else {
 
             progressDialog.show();
             str_correo = correo.getText().toString().trim();
