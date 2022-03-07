@@ -79,7 +79,7 @@ public class register extends AppCompatActivity {
                             else{
                                 Toast.makeText(register.this, response, Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
-                                Toast.makeText(register.this, "No se puede insrtar", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(register.this, "No se puede agregar", Toast.LENGTH_SHORT).show();
                             }
 
                         }

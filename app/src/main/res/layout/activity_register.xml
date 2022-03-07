@@ -34,7 +34,7 @@
             android:hint="Correo"
             android:textColorHint="@color/gris"
             android:textColor="@color/gris"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:fontFamily="@font/product_sans_regular"/>
 
         <EditText

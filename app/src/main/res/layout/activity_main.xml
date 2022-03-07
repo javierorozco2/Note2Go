@@ -26,6 +26,7 @@
 
         <EditText
             android:layout_width="match_parent"
+            android:id="@+id/logincorreo"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:background="@drawable/blanco"
@@ -34,11 +35,12 @@
             android:hint="Correo"
             android:textColorHint="@color/gris"
             android:textColor="@color/gris"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:fontFamily="@font/product_sans_regular"/>
 
         <EditText
             android:layout_width="match_parent"
+            android:id="@+id/loginpass"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:background="@drawable/blanco"
