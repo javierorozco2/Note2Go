@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         registro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ListaNotas.class);
+                Intent i = new Intent(MainActivity.this, register.class);
                 startActivity(i);
             }
         });

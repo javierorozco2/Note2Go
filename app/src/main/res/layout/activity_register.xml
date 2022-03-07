@@ -24,6 +24,7 @@
             android:fontFamily="@font/product_sans_bold"/>
 
         <EditText
+            android:id="@+id/registerCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -37,6 +38,7 @@
             android:fontFamily="@font/product_sans_regular"/>
 
         <EditText
+            android:id="@+id/registerPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -50,6 +52,7 @@
             android:fontFamily="@font/product_sans_regular"/>
 
         <EditText
+            android:id="@+id/registerReppass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"

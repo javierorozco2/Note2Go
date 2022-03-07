@@ -4,21 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/drawable/blanco.xml" value="0.1515" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/drawable/bluelineshape.xml" value="0.2175" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/drawable/gradient.xml" value="0.1435" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/drawable/ic_marcador.xml" value="0.18" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/drawable/rectangle.xml" value="0.18" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_editnota.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_lista_notas.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_nuevaubicacion.xml" value="0.176" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_register.xml" value="0.265625" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/activity_ubicaciones.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/card.xml" value="0.264" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/cardnotas.xml" value="0.264" />
-        <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/cardubicacionguard.xml" value="0.264" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/layout/toolbar.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/jvr/AndroidStudioProjects/Note2Go/app/src/main/res/menu/opciones.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/ic_marcador.xml" value="0.124" />
+        <entry key="app/src/main/res/layout/activity_lista_notas.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/layout/activity_nuevaubicacion.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/layout/activity_ubicaciones.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/card.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/cardnotas.xml" value="0.25" />
       </map>
     </option>
   </component>
