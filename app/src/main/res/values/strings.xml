@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Note2Go</string>
+    <string name="invalid_mail">El correo ingresado es incorrecto</string>
+    <string name="invalid_pass">La contraseña debe ser mayor a 6 caracteres</string>
 </resources>

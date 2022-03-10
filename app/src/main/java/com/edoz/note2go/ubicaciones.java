@@ -1,5 +1,6 @@
 package com.edoz.note2go;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +10,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +29,13 @@ public class ubicaciones extends AppCompatActivity {
     ImageView salir, nueva;
 
     Toolbar toolbar;
+    RecyclerView recyclerView;
+    DatabaseReference database;
+
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    FirebaseDatabase db = FirebaseDatabase.getInstance();
+    DatabaseReference ref_user =db.getReference("Users").child(user.getUid());
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +47,9 @@ public class ubicaciones extends AppCompatActivity {
         salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(ubicaciones.this, "Sesion cerrada", Toast.LENGTH_SHORT).show();
+                goMain();
             }
         });
 
@@ -42,21 +61,64 @@ public class ubicaciones extends AppCompatActivity {
             }
         });
 
-        crearCardUbicaciones();
+        userUnico(); //Genera datos del usuario
+        crearCardUbicacionesDB();
     }
 
-    public void crearCardUbicaciones() {
-        elements = new ArrayList<>();
+    private void userUnico() {
+        ref_user.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.exists()){
+                    ListElement uu = new ListElement(
+                            user.getEmail(),
+                            "Cantidad invalida",
+                            "Lista invalida"
+                    );
 
-        // Nombre de ubicacion, cantidad de notas, listas dentro de ella
-        elements.add(new ListElement("Casa","10 Notas","Nota 1  • Nota 2 • Nota 3 • Nota 4 • Nota 5 • Nota 6 • Nota 7 • Nota 8 • Nota 9 • Nota 10 \n"));
-        elements.add(new ListElement("Escuela","10 Notas","Nota 1  • Nota 2 • Nota 3 • Nota 4 • Nota 5 • Nota 6 • Nota 7 • Nota 8 • Nota 9 • Nota 10 \n"));
-        elements.add(new ListElement("Trabajo","10 Notas","Nota 1  • Nota 2 • Nota 3 • Nota 4 • Nota 5 • Nota 6 • Nota 7 • Nota 8 • Nota 9 • Nota 10 \n"));
+                    ref_user.setValue(uu);
+                }
+            }
 
-        ListAdapter listAdapter = new ListAdapter(elements,this);
-        RecyclerView rv = findViewById(R.id.rv);
-        rv.setHasFixedSize(true);
-        rv.setLayoutManager(new LinearLayoutManager(this));
-        rv.setAdapter(listAdapter);
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void crearCardUbicacionesDB() {
+        ListAdapter listAdapter;
+        ArrayList<ListElement> list;
+        recyclerView = findViewById(R.id.rv);
+
+        database = FirebaseDatabase.getInstance().getReference("Users");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        list = new ArrayList<>();
+        listAdapter = new ListAdapter(list, this);
+        recyclerView.setAdapter(listAdapter);
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    ListElement le = dataSnapshot.getValue(ListElement.class);
+                    list.add(le);
+                }
+                listAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
+    private void goMain() {
+        Intent i = new Intent(ubicaciones.this, MainActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
     }
 }

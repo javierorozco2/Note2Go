@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "475561622528",
+    "project_id": "note2go-9bda9",
+    "storage_bucket": "note2go-9bda9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475561622528:android:815911fbe34be6396e6ce5",
+        "android_client_info": {
+          "package_name": "com.edoz.note2go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475561622528-4kdc5r8fc1dqp836o2en7qbcf5ldl41b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edoz.note2go",
+            "certificate_hash": "4a53711275742797b9e58a2dfec2cccc5f1d2191"
+          }
+        },
+        {
+          "client_id": "475561622528-got3lbc6fdj4brha3g8uegja1ph5mqsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7R2l5po3v-ap1Y5Ea7BWHkuRNlS3yeBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475561622528-got3lbc6fdj4brha3g8uegja1ph5mqsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

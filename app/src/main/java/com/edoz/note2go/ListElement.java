@@ -12,6 +12,9 @@ public class ListElement {
         this.listas = listas;
     }
 
+    public ListElement() {
+    }
+
     public String getNombre() {
         return nombre;
     }
