@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.edoz.note2go.clases.Notas;
+import com.edoz.note2go.clases.Ubicaciones;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.nio.channels.NotYetBoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +37,8 @@ public class ubicaciones extends AppCompatActivity {
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     FirebaseDatabase db = FirebaseDatabase.getInstance();
-    DatabaseReference ref_user =db.getReference("Users").child(user.getUid());
+    DatabaseReference ref_user =db.getReference("Usuarios").child(user.getUid()).child("Ubicaciones");
+    DatabaseReference ref_notas = db.getReference("Usuarios").child(user.getUid()).child("Notas");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,13 +74,34 @@ public class ubicaciones extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (!snapshot.exists()){
-                    ListElement uu = new ListElement(
-                            user.getEmail(),
-                            "Cantidad invalida",
-                            "Lista invalida"
+                    Ubicaciones uu = new Ubicaciones(
+                            "",
+                            "",
+                            "",
+                            ""
                     );
-
                     ref_user.setValue(uu);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        ref_notas.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.exists()){
+                    Notas uu = new Notas(
+                            "Ejemplo",
+                            "Ejemplo",
+                            "Ejemplo",
+                            "10/03/22",
+                            "#FFF"
+                    );
+                    ref_notas.setValue(uu);
                 }
             }
 
